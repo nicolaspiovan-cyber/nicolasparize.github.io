@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História da Hatsune Miku</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --miku-color: #39C5BB; /* Cor oficial da Miku */
+            --bg-color: #1a1a2e;
+            --text-color: #f1f1f1;
+            --card-bg: #16213e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.9)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Hatsune_Miku_logo.svg/1200px-Hatsune_Miku_logo.svg.png') center/cover;
+            border-bottom: 5px solid var(--miku-color);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: var(--miku-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #ccc;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        /* Linha central */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--miku-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--bg-color);
+            border: 4px solid var(--miku-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left { left: 0; }
+        .right { left: 50%; }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 18px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--card-bg);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--card-bg);
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 18px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--card-bg);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--card-bg) transparent transparent;
+        }
+
+        .right::after { left: -10px; }
+
+        .content {
+            padding: 20px;
+            background-color: var(--card-bg);
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(57, 197, 187, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(57, 197, 187, 0.4);
+        }
+
+        .content h2 {
+            color: var(--miku-color);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .content p { font-size: 1rem; }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0f0f1a;
+            color: #888;
+            border-top: 2px solid var(--miku-color);
+        }
+
+        /* Responsividade para telas menores */
+        @media screen and (max-width: 600px) {
+            .timeline::after { left: 31px; }
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .container::before {
+                left: 60px;
+                border: medium solid var(--card-bg);
+                border-width: 10px 10px 10px 0;
+                border-color: transparent var(--card-bg) transparent transparent;
+            }
+            .left::after, .right::after { left: 21px; }
+            .right { left: 0%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Hatsune Miku</h1>
+        <p>A História Cronológica da Maior Popstar Virtual do Mundo</p>
+    </header>
+
+    <div class="timeline">
+        
+        <div class="container left">
+            <div class="content">
+                <h2>31 de Agosto de 2007</h2>
+                <p><strong>O Nascimento:</strong> A Crypton Future Media lança a Hatsune Miku, desenvolvida no motor Vocaloid 2 da Yamaha. Seu banco de voz foi criado a partir de amostras da dubladora japonesa Saki Fujita.</p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>2009</h2>
+                <p><strong>Primeiro Jogo e Show:</strong> Lançamento do jogo <em>Hatsune Miku: Project DIVA</em> para PSP. No mesmo ano, ela faz seu primeiro show ao vivo, "MikuFes '09", cantando em uma tela transparente.</p>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>2010</h2>
+                <p><strong>Miku Append:</strong> Lançamento do <em>Hatsune Miku Append</em>, um pacote adicional que deu novas expressões e tons vocais à Miku (como Sweet, Dark, Soft, Solid, Vivid e Light).</p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>2011</h2>
+                <p><strong>Conquista Global:</strong> Miku faz seu primeiro grande show fora do Japão, o <em>Mikunopolis</em> em Los Angeles, como parte do evento Anime Expo. Ela se consolida como um fenômeno mundial.</p>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>2013 - 2014</h2>
+                <p><strong>V3 e Lady Gaga:</strong> Atualização para o motor Vocaloid 3 com lançamento do <em>Hatsune Miku V3</em> e banco de voz em inglês. Em 2014, ela abriu os shows da turnê "Artpop Ball" da Lady Gaga.</p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>2016</h2>
+                <p><strong>Hatsune Miku V4X:</strong> Uma grande atualização de software foi lançada, aprimorando sua pronúncia e permitindo que os produtores musicais usassem "rosnados" e transições vocais mais naturais.</p>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>2020</h2>
+                <p><strong>Hatsune Miku NT (New Type):</strong> A Crypton decide deixar o motor Vocaloid da Yamaha e lança o próprio software, chamado Piapro Studio NT, inaugurando uma nova era independente para a cantora.</p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>Dias Atuais</h2>
+                <p><strong>Um Legado Infinito:</strong> Miku continua a fazer turnês globais (como a Miku Expo), colaborar com marcas famosas e inspirar milhões de criadores de conteúdo pelo mundo inteiro, provando que a música digital não tem limites.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Feito para fãs da Miku 💙 Desenvolvido no VS Code.</p>
+    </footer>
+
+</body>
+</html>
